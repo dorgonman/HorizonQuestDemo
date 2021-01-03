@@ -1,0 +1,62 @@
+name: $(Date:yyyyMMdd).$(Rev:.r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - Source/*
+      - Plugins/*
+      - ./*.uproject
+
+variables:
+    - name:  Pipeline.GameProjectRoot
+      value: '.'
+
+
+
+parameters:
+  - name: bCleanSCM
+    displayName: Pipeline bCleanSCM
+    type: boolean
+    default: false
+    values:
+    - true
+    - false
+
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: EpicGames/azure-pipelines-template
+
+stages:
+  - stage: Build
+    jobs:
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Win64_GameEditor'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
+          bCleanSCM: ${{ parameters.bCleanSCM }}
+
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Mac_GameEditor'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'mac'
+          bCleanSCM: ${{ parameters.bCleanSCM }}
+
+  - stage: Deploy
+    jobs:
+    - template: job/create-and-push-nuget-package.yml@templates
+      parameters:
+          name: 'Create_And_Push_Nuget_Package'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
