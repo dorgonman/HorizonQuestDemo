@@ -12,3 +12,10 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
+/Build/Script/*.Automation/obj/
+/Build/Script/*.Automation/Properties/
+/LastCoverageResults.log
+/Content/NonUFS/Copy/Game.version
+Releases
+/Build/WindowsNoEditor/FileOpenOrder/CookerOpenOrder.log
+/Build/WindowsNoEditor/FileOpenOrder/EditorOpenOrder.log
