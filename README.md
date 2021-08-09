@@ -5,7 +5,7 @@
 
 Note: 
 
-main branch may be unstable since it is in development, please switch to tags, for example: editor/4.26.0.1
+main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1
 
   
 ----------------------------------------------
@@ -108,7 +108,7 @@ User Guide: How extends QuestGraphNode with C++ and Add Game Specific UPROPERTY
 
         
           UCLASS()
-          class UHorizonQuestGameDemoQuestGraphNode : public UHorizonQuestGraphNode
+          class HORIZONQUESTDEMO_API UHorizonQuestGameDemoQuestGraphNode : public UHorizonQuestGraphNode
           {
             GENERATED_BODY()
             
@@ -180,10 +180,7 @@ Features:
 Code Modules:
 
 HorizonQuest (Runtime)
-HorizonQuest (Runtime)
 HorizonQuestEditor (Editor)
-HorizonQuestEditor (Editor)
-HorizonQuest (Runtime)
 
 
 Network Replicated: False  
@@ -200,7 +197,7 @@ Example Project:
 
 
 
-[DemoVideo](https://youtu.be/1CIZ5AQ5MK8)  
+[DemoVideo](https://youtu.be/ju3tL1lv7lU)  
 [QuickStartVideo](https://youtu.be/mANMYY476mM)
 
 -----------------------
