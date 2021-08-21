@@ -92,7 +92,12 @@ QuestRequirement is defined using Blueprint that can encapsulate any gameplay lo
 ![RequirementData](./ScreenShot/HorizonQuest_ScreenShot_QuestRequirement_Data.png) 
 
 
-A Quest should pass all requirements assigned in DataTable before completed.
+Here has two types of QuestRequirement:
+
+1. AcceptRequirements: A Quest should pass all requirements assigned in DataTable before the quest can be accepted.
+2. CompleteRequirements: A Quest should pass all requirements assigned in DataTable before the quest can be completed.
+
+
 
 -----------------------
 User Guide: How to define QuestReward
@@ -129,6 +134,32 @@ Currently Plugin has two types of QuestContext you can assign to Quests in Quest
 
 1. QuestContext_AcceptFrom:  MQ001 can be Accepted from BP_NPC_Demo1, when you trying to Accept the Quest using QuestManager, you should pass BP_NPC_Demo1.
 2. QuestContext_CompletedBy: MQ001 can be Completed by BP_NPC_Demo2, when you trying to Complete the Quest using QuestManager, you should pass BP_NPC_Demo2.
+
+
+
+-----------------------
+User Guide: QuestManager and FlagManager
+-----------------------
+
+The best place to put HorizonQuestManager and HorizonQuestFlagManager Component is PlayerState, but if you need to shared Quest progress between multiple player, put Components in GameState or GameMode is another choice. But since GameMode can't be accessed from client in Networked games, so it is depends on game design.
+
+In order to Accept/Complete a Quest, it should pass Dependency(With Optional Quest support), Requirement, and QuestContext checks.
+
+
+-----------------------
+User Guide: QuestStep
+-----------------------
+
+QuestStep is just another QuestGraph that can assign to every QuestNode, which means you can recursively defined QuestStep for each QuestNode.
+We usually didn't want to designed a Quest that has too much step depth, most quest system I know only support one depth step, but it is depend on game design, this plugin didn't limit depth of QuestStep.
+
+Another hint about QuestStep is you may want to auto accept QuestStep when a Quest begin and start next step when previous step completed.
+This plugin support such use case by following two flags in each QuestNode:
+
+AutoAcceptQuestStepOnQuestAccepted: Enabled by default, when a Quest is accepted, it also accept all acceptable steps use given QuestContext.
+AutoAcceptNextQuestOnQuestCompleted: Disabled by default, when a Quest is completed, it also accept all acceptable Quests use given QuestContext. You usaually want to enable this in QuestSteps but not in MainQuest.
+
+![QuestStep_AutoAcceptNext](./ScreenShot/HorizonQuest_ScreenShot_QuestStep_AutoAcceptNext.png) 
 
 -----------------------
 User Guide: Integrate Quest with Dialogue System
