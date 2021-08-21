@@ -46,11 +46,24 @@ User Guide: Quick Start
 ![DesignQuestGraph](./ScreenShot/HorizonQuest_ScreenShot_DesignQuestGraph.png)  
 
 You can have two types of QuestDependency: Accept(Ⓐ Icon) and Complete(Ⓒ Icon). 
-The Image above describe following relationship:
 
-+ Accept(Ⓐ) Dependency: means you can only accept MQ002 and SQ002 only after MQ001 is Completed.  
-+ Complete(Ⓒ) Dependency: means you can only complete SQ002 only after SQ001 is Complete.
-+ No Dependency: Like MQ001 and SQ001, you can accept and complete the quests at any time when QuestRequirement is meet.
++ Accept(Ⓐ) Dependency: means you can "Accept" the Quest only after it's Parent Quest is Completed. 
+
+	Following image shows a possible use case that you will want to use Accept Dependency, check folling path to see how to implement it: /Game/_HorizonQuestUseCase/DragonQuest/QuestGraph/QuestGraph_DragonQuest:
+
+![Dependency A](./ScreenShot/HorizonQuest_Dependency_A.png)  
+	
+
++ Complete(Ⓒ) Dependency: means you can "Complete" the Quest only after it's Parent Quest is Completed.
+
+	Following image shows a possible use case that you will want to use Complete Dependency, check folling path to see how to implement it: /Game/_HorizonQuestUseCase/CookMushroom/QuestGraph/QuestGraph_CookMushroom:
+
+![Dependency C](./ScreenShot/HorizonQuest_Dependency_C.png)  
+
+
+
++ No Dependency: You can accept and complete the quests at any time when QuestRequirement is meet.
+
 
 
 3. Add HorizonQuestManager and HorizonQuestFlagManager Component to your PlayerState.
@@ -73,6 +86,8 @@ Following screenshot is some Functions in QuestManagers.
 Following screenshot is some Functions in QuestFlagManagers.
 
 ![QuestFlagManager](./ScreenShot/HorizonQuest_ScreenShot_QuestFlagManager.png)  
+
+
 
 
 -----------------------
@@ -136,14 +151,37 @@ Currently Plugin has two types of QuestContext you can assign to Quests in Quest
 2. QuestContext_CompletedBy: MQ001 can be Completed by BP_NPC_Demo2, when you trying to Complete the Quest using QuestManager, you should pass BP_NPC_Demo2.
 
 
+-----------------------
+User Guide: QuestManager
+-----------------------
+
+QuestManager is used to store and manipulate player's Quest, 
+we can retrive current acceptable/completable quest using given QuestContext,
+or query a specific quest's state.
+
+It also support Serialization, so we can Save/Load player's quest progress using GetArchiveData/SetArchiveData.
+
 
 -----------------------
-User Guide: QuestManager and FlagManager
+User Guide: FlagManager
 -----------------------
 
-The best place to put HorizonQuestManager and HorizonQuestFlagManager Component is PlayerState, but if you need to shared Quest progress between multiple player, put Components in GameState or GameMode is another choice. But since GameMode can't be accessed from client in Networked games, so it is depends on game design.
+You can see FlagManager as help or simpler version of Quest System.  
 
-In order to Accept/Complete a Quest, it should pass Dependency(With Optional Quest support), Requirement, and QuestContext checks.
+FlagManager didn't have any dependency check, it simply keep record of GameplayTag's trigger count.
+
+The design goal of FlagManager is designed to help user to design complex Quest Requirement, 
+for example, if player need to slay 5 Goblins in order to pass the quest, 
+you can keep the count in the flag and check the count we just recorded in Requirement to see if player can pass the Quest.
+
+
+-----------------------
+User Guide: Using QuestManager and FlagManager
+-----------------------
+
+The best place to put HorizonQuestManager and HorizonQuestFlagManager Component is PlayerState, but if you need to shared Quest progress between other players, put the Components in GameState is another choice. 
+
+In order to Accept/Complete a Quest, it should pass all Prerequisite and Precondition check: Quest Progressing checks, Dependency checks, Requirement checks, and QuestContext checks.
 
 
 -----------------------
@@ -228,6 +266,38 @@ This section will show how to extend QuestGraphNode, so we use additional inform
 
 ![BP_QuestNode Customization](./ScreenShot/HorizonQuest_ScreenShot_BP_QuestNode_Customization.png) 
 
+
+
+
+-----------------------
+User Guide: Listen/Dedicated Server support
+-----------------------
+
+This plugin is designed to use with network game in mind, but it didn't worked out of box, since it is very difficult to handle all use case without knowing project design. You can check this demo game to see how to make your own games with this plugin, since it was trying to implement minimum required RPC functions using Blueprint for demo purpose
+
+Here is some tips about how to use plugin with network games.
+
+1. First, you will need to ensure Replicates property is enabled in HorizonQuestManagerComponent and HorizonQuestFlagManagerComponent.
+
+![Enable Replication](./ScreenShot/HorizonQuest_ScreenShot_Replication1.png) 
+
+2. In Widget Blueprint binding and refresh your UI in NetworkReplicated callback.
+
+![Refresh UI](./ScreenShot/HorizonQuest_ScreenShot_Replication2.png) 
+
+3. If you put the Components in GameState or GameMode in order to share Quests between players, you will need to send Accept/Complete Quest RPCs from PlayerController or PlayerState., since client didn't owning connect if you try to send RPC throught GameState, and of couse, you can't get GameMode in client. 
+
+Defined Accept/Complete Quest RPC functions in PlayerController:
+
+![Accept/Complete Quest RPC Function Define](./ScreenShot/HorizonQuest_ScreenShot_Replication3.png)
+
+
+Call Accept/Complete Quest RPC Function from your WBP, it will call Accept/Complete Quest in Server.
+
+![Call Accept/Complete Quest RPC Function](./ScreenShot/HorizonQuest_ScreenShot_Replication4.png)
+
+
+4. You can try to eliminate UI delay caused by network replication callback using client prediction technique: Calling Accept/Complete locally before sending ServerRPC. 
 
 -----------------------
 HorizonQuest: TestCase
