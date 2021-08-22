@@ -955,8 +955,6 @@ void FHorizonQuestFlagSpec::Define()
 ```
 
 
-
-
 -----------------------
 Technical Details
 -----------------------
@@ -983,9 +981,9 @@ Code Modules:
 
 HorizonQuest (Runtime)
 HorizonQuestEditor (Editor)
+HorizonQuestFlag (Runtime)
 
-
-Network Replicated: False  
+Network Replicated: True  
 
 Supported Development Platforms: Win64, Mac, Linux  
 
@@ -996,8 +994,6 @@ Tested Platform: Win64
 Documentation: https://github.com/dorgonman/HorizonQuestDemo
 
 Example Project: https://github.com/dorgonman/HorizonQuestDemo
-
-
 
 [DemoVideo](https://youtu.be/ju3tL1lv7lU)  
 [QuickStartVideo](https://youtu.be/mANMYY476mM)
