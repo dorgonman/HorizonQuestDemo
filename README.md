@@ -993,9 +993,9 @@ Supported Target Build Platforms: All Platforms
 
 Tested Platform: Win64  
 
-Documentation: 
+Documentation: https://github.com/dorgonman/HorizonQuestDemo
 
-Example Project: 
+Example Project: https://github.com/dorgonman/HorizonQuestDemo
 
 
 
