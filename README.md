@@ -1,3 +1,13 @@
+[Marketplace](https://www.unrealengine.com/marketplace/en-US/product/horizon-quest) 
+
+[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonQuestDemo-Shipping-CI?repoName=HorizonQuestDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=54&repoName=HorizonQuestDemo&branchName=main)
+
+public feed: nuget.org  
+
+[![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonQuestDemo.svg)](https://www.nuget.org/packages/HorizonQuestDemo/)
+  
+
+
 
 ![DesignQuestGraph](./ScreenShot/HorizonQuest_ScreenShot_DesignQuestGraph.png)  
 
