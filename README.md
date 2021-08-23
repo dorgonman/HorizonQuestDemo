@@ -314,7 +314,7 @@ Call Accept/Complete Quest RPC Function from your WBP, it will call Accept/Compl
 Technical Details
 -----------------------
 
-This plugin is inspired by GDC talk [Building Non-Linear Narratives in Horizon: Zero Dawn](https://www.youtube.com/watch?v=ykPZcG8_mPU) and the graph editor is modified from [GenericGraph, MIT License](https://github.com/jinyuliao/GenericGraph).
+This plugin is inspired by GDC talk [Building Non-Linear Narratives in Horizon: Zero Dawn](https://www.youtube.com/watch?v=ykPZcG8_mPU).
 
 The goal of this plugin is to provoide a general purpose Quest System that can support non-linear story telling. 
 
