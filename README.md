@@ -169,7 +169,7 @@ QuestManager is used to store and manipulate player's Quest,
 we can retrive current acceptable/completable quest using given QuestContext,
 or query a specific quest's state.
 
-It also support Serialization, so we can Save/Load player's quest progress using GetArchiveData/SetArchiveData.
+It also support Serialization, so we can Save/Load player's quest progress using GetArchiveData/SetArchiveData with [Unreal SaveGame system](https://docs.unrealengine.com/4.26/en-US/InteractiveExperiences/SaveGame/).
 
 
 -----------------------
