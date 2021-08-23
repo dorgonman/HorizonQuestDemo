@@ -142,7 +142,7 @@ QuestReward is defined using Blueprint that can encapsulate any quest reward log
 
 Here has three types of QuestReward:
 
-1. Quest Accepted: You can give player critial items, for example, a key to open dungeon boss's door.
+1. Quest Accepted: You can give player critical items, for example, a key to open dungeon boss's door.
 2. Quest Completed with Success State.
 3. Quest Completed with Failed State: You can give player any punishment here.
 
