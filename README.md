@@ -1,4 +1,4 @@
-[Marketplace](https://www.unrealengine.com/marketplace/en-US/product/horizon-quest) 
+[Marketplace](https://www.unrealengine.com/marketplace/en-US/product/horizon-quest-general-purpose-quest-graph-system) 
 
 [![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonQuestDemo-Shipping-CI?repoName=HorizonQuestDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=54&repoName=HorizonQuestDemo&branchName=main)
 
