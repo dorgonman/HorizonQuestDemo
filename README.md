@@ -196,7 +196,7 @@ you can keep the count in the flag and check the count we just recorded in Requi
 User Guide: Using QuestManager and FlagManager
 -----------------------
 
-The best place to put HorizonQuestManager and HorizonQuestFlagManager Component is PlayerState, but if you need to shared Quest progress between other players, put the Components in GameState is another choice. 
+The best place to put HorizonQuestManager and HorizonQuestFlagManager Component is PlayerState, but if you need to share Quest progress between other players, put the Components in GameState is another choice. 
 
 In order to Accept/Complete a Quest, it should pass all Prerequisite and Precondition check: Quest Progressing checks, Dependency checks, Requirement checks, and QuestContext checks.
 
