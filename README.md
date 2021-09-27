@@ -321,6 +321,47 @@ Call Accept/Complete Quest RPC Function from your WBP, it will call Accept/Compl
 
 
 -----------------------
+User Guide: Enable Fast TArray Replication(FTR)
+-----------------------
+
+This is advanced topics, I am recommending you should only enable this feature when you know the risks it may have.
+
+[Fast TArray Replication](https://docs.unrealengine.com/en-US/API/Runtime/Engine/Engine/FNetFastTArrayBaseState/) is the feature that are recommanded officially for optimize TArray replication in network games. 
+
+
+
+You can enable this feature by add C++ definition in Target.cs:
+```
+        bOverrideBuildEnvironment = true;
+        GlobalDefinitions.Add("HORIZON_PLUGIN_ENABLE_FAST_TARRAY_REPLICATION=1");
+```
+
+Althought this plugin implement the feature for QuestGraphDataContainer and QuestFlagDataContainer, but it didn't enbled by default for two reasons:
+
+1. Using this feature without knowing how it works is dangerous.
+2. Not all game need it, it didn't have obvious advantage to trade off Ease of use for performance.
+
+I don't know what is best way to use the plugin when the feature enabled, but here is some tips:
+
+1. Don't do client side prediction when you trying to AcceptQuest/DropQuest. 
+2. QuestTrigger that may AcceptQuest/DropQuest should not run in client.  
+
+For example, you may want to do something like this:  
+
+![TriggerQuest Only On Server](./ScreenShot/HorizonQuest_ScreenShot_TriggerOnlyOnServer.png)
+
+
+Since FTR will aggressively optimize TArray and only replicated back array items it changed in server,
+AcceptQuest/DropQuest will treat client prediction changes and server changes as different array item, 
+and you will get different array size in client and server, which is not what we expect to happen. 
+Without FTR, we are free from the bugs caused by this use case.
+
+
+
+
+
+
+-----------------------
 Technical Details
 -----------------------
 
@@ -374,6 +415,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*4.27.2  
+
+      NEW: Implement Fast Array Replication and redesign SaveGameData
 
 *4.27.0  
 
