@@ -9,6 +9,8 @@ public class HorizonQuestDemoTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.Add("HorizonQuestDemo");
+        bOverrideBuildEnvironment = true;
+        GlobalDefinitions.Add("HORIZON_PLUGIN_ENABLE_FAST_ARRAY_REPLICATION=1");
+        ExtraModuleNames.Add("HorizonQuestDemo");
 	}
 }
