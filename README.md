@@ -324,42 +324,33 @@ Call Accept/Complete Quest RPC Function from your WBP, it will call Accept/Compl
 User Guide: Enable Fast TArray Replication(FTR)
 -----------------------
 
-This is advanced topics, I am recommending you should only enable this feature when you know the risks it may have.
+[Fast TArray Replication](https://docs.unrealengine.com/en-US/API/Runtime/Engine/Engine/FNetFastTArrayBaseState/) is the feature that are recommanded officially for optimize TArray replication in network games. Althought this plugin implement the feature, but it didn't enbled by default for following reasons:
 
-[Fast TArray Replication](https://docs.unrealengine.com/en-US/API/Runtime/Engine/Engine/FNetFastTArrayBaseState/) is the feature that are recommanded officially for optimize TArray replication in network games. 
+1. Using this feature without knowing how it works is dangerous.
+2. Not all game need it. For some games, itt may not have obvious advantage, but introduce some usage limitation.
 
+It is not easy to document the best practice when the feature enabled, but here are some tips:
 
+1. Don't do client side prediction when you trying to AcceptQuest/DropQuest. 
+2. QuestTrigger that may AcceptQuest/DropQuest should not run in client.  
 
-You can enable this feature by add C++ definition in Target.cs:
+For example, you will want to do something like this:  
+
+![TriggerQuest Only On Server](./ScreenShot/HorizonQuest_ScreenShot_TriggerOnlyOnServer.png)
+
+Since FTR will aggressively optimize TArray and only replicated back array items it changed in server,
+AcceptQuest/DropQuest will treat client prediction changes and server changes as different array item, 
+and you will get different array size in client and server, which is not we expected. 
+Without FTR, we are free from the bugs caused by this use case.
+
+To enable this feature, you will need to recompile plugin by copy the plugin from ${UNREAL_ENGINE_ROOT}/Engine/Plugins/Marketplace/HorizonQuest to ${PROJECT_ROOT}/Plugins, 
+and add C++ definition to all of your build targets, ${PROJECT_NAME}.Target.cs and ${PROJECT_NAME}Editor.Target.cs:
 ```
         bOverrideBuildEnvironment = true;
         GlobalDefinitions.Add("HORIZON_PLUGIN_ENABLE_FAST_TARRAY_REPLICATION=1");
 ```
 
-Althought this plugin implement the feature for QuestGraphDataContainer and QuestFlagDataContainer, but it didn't enbled by default for two reasons:
-
-1. Using this feature without knowing how it works is dangerous.
-2. Not all game need it, it didn't have obvious advantage to trade off Ease of use for performance.
-
-I don't know what is best way to use the plugin when the feature enabled, but here is some tips:
-
-1. Don't do client side prediction when you trying to AcceptQuest/DropQuest. 
-2. QuestTrigger that may AcceptQuest/DropQuest should not run in client.  
-
-For example, you may want to do something like this:  
-
-![TriggerQuest Only On Server](./ScreenShot/HorizonQuest_ScreenShot_TriggerOnlyOnServer.png)
-
-
-Since FTR will aggressively optimize TArray and only replicated back array items it changed in server,
-AcceptQuest/DropQuest will treat client prediction changes and server changes as different array item, 
-and you will get different array size in client and server, which is not what we expect to happen. 
-Without FTR, we are free from the bugs caused by this use case.
-
-
-
-
-
+You can check HorizonQuestGraphDataContainer and HorizonQuestFlagDataContainer to see how it implemented.
 
 -----------------------
 Technical Details
