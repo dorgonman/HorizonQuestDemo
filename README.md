@@ -327,7 +327,7 @@ User Guide: Enable Fast TArray Replication(FTR)
 [Fast TArray Replication](https://docs.unrealengine.com/en-US/API/Runtime/Engine/Engine/FNetFastTArrayBaseState/) is the feature that are recommanded officially for optimize TArray replication in network games. Althought this plugin implement the feature, but it didn't enbled by default for following reasons:
 
 1. Using this feature without knowing how it works is dangerous.
-2. Not all game need it. For some games, itt may not have obvious advantage, but introduce some usage limitation.
+2. Not all game need it. For some games, it may not have obvious advantage, but introduce some usage limitation.
 
 It is not easy to document the best practice when the feature enabled, but here are some tips:
 
