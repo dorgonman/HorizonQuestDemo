@@ -104,6 +104,38 @@ Following screenshot is some Functions in QuestFlagManagers.
 ![QuestFlagManager](./ScreenShot/HorizonQuest_ScreenShot_QuestFlagManager.png)  
 
 
+-----------------------
+User Guide: Quest Widgets
+-----------------------
+
+This plugin implement some C++ Widgets that can help show player's quest progression in UI. 
+
+You may want to check demo project first to see how to implement those Widget as WBP and adjust it layouts:
+/Game/_HorizonQuestDemo/_Subsystem/Quest/UI/Widget/WBP_QuestMenu.WBP_QuestMenu
+
+![QuestWidgets](./ScreenShot/HorizonQuest_ScreenShot_QuestWidget.png)  
+
+1. HorizonQuestMenuWidget is most import part of Quest UI, it put HorizonQuestTreeView and HorizonQuestDetailWidget together and display of those widgets. 
+
+2. HorizonQuestTreeView implment [UTreeView](https://docs.unrealengine.com/4.27/en-US/BlueprintAPI/TreeView/) come from UMG that can display all Quest and QuestStep in single Widget. This widget should be used together with HorizonQuestListIItemWidget(or it inheritance class), which implement IUserObjectListEntry for TreeView and QuestInfo UI Synchronization.
+
+3. HorizonQuestDetailWidget is the Widget that can display single QuestInfo come from QuestGraph and QuestDataTable.
+
+There are some other useful Widget provided in the plugin:
+
+4. HorizonQuestDebugTileView/HorizonQuestDebugListIItemWidget: Used for list all Quests in QuestGraph and and Trigger the Quest which click. 
+   You can check current support Trigger type in following screenshot.
+
+![QuestDebugUI](./ScreenShot/HorizonQuest_ScreenShot_DebugUI.png)  
+
+
+5. HorizonQuestHintWidget: The widget is used with NPC to display if we can Accept/Complete/CannotComplete the Quest.
+
+|
+![QuestHintAccept](./ScreenShot/HorizonQuest_ScreenShot_QuestHintAccept.png)  |
+![QuestHintComplete](./ScreenShot/HorizonQuest_ScreenShot_QuestHintComplete.png) |
+![QuestHintCannotComplete](./ScreenShot/HorizonQuest_ScreenShot_QuestHintCannotComplete.png) 
+|
 
 
 -----------------------
