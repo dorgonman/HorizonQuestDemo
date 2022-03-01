@@ -439,6 +439,19 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*5.0.0
+
+* [BugFix][DataTable] Fix HorizonQuestDataTableRowHandle operator override wrong type
+
+* [BugFix] Fix build machine compile error
+
+* [Refactor][QuestManager] SetArchiveData
+
+* [BugFix] Skip InQuestTypeTagFilter check if it is empty
+
+* [New][HorizonQuestTableRow] Implement QuestTypeTag
+
+
 *4.27.2  
 
       NEW: Implement Fast Array Replication and redesign SaveGameData
