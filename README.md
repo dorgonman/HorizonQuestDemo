@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 
 ----------------------------------------------
                HorizonQuestDemo
-                 4.27.0
+                 5.0.0
           	dorgonman@hotmail.com
 ----------------------------------------------
    
@@ -35,7 +35,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.27
+Supported UnrealEngine version: 4.27-5.0
  
 
 -----------------------

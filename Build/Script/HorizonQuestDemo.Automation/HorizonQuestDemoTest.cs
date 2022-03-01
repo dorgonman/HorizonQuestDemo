@@ -9,10 +9,10 @@ using Gauntlet;
 using System.IO;
 using System.IO.Compression;
 
-namespace UE4Game
+namespace UnrealGame
 {
 
-	public class HorizonQuestDemoTestConfig : UE4TestConfig
+	public class HorizonQuestDemoTestConfig : UnrealTestConfiguration
 	{
 		/// <summary>
 		/// Map to use
@@ -23,7 +23,7 @@ namespace UE4Game
 		public string AdditionalCommandLine = "";
 		
 		[AutoParam]
-		public string ExecCmds = "automation SetMinimumPriority Critical;RunTests Plugin+Project.FunctionalTests;Quit";
+		public string ExecCmds = "automation SetMinimumPriority Critical;RunTests Filter:Plugin+Filter:_Game+Filter:Project.Functional Tests;Quit";
         
 
         /// <summary>
