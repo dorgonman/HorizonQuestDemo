@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 
 ----------------------------------------------
                HorizonQuestDemo
-                 5.0.0
+                 5.0.1
           	dorgonman@hotmail.com
 ----------------------------------------------
    
@@ -438,6 +438,13 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.0.1 
+
+* [BugFix] RefreshQuestListViewByQuestList not work as expect and possible crash
+
+* [BugFix] UE5 Compile Warning
+
 
 *5.0.0
 
