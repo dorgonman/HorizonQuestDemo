@@ -375,11 +375,11 @@ AcceptQuest/DropQuest will treat client prediction changes and server changes as
 and you will get different array size in client and server, which is not we expected. 
 Without FTR, we are free from the bugs caused by this use case.
 
-To enable this feature, you will need to recompile plugin by copy the plugin from ${UNREAL_ENGINE_ROOT}/Engine/Plugins/Marketplace/HorizonQuest to ${PROJECT_ROOT}/Plugins, 
-and add C++ definition to all of your build targets, ${PROJECT_NAME}.Target.cs and ${PROJECT_NAME}Editor.Target.cs:
+To enable this feature, you will need to recompile plugin by copy the plugin from \${UNREAL_ENGINE_ROOT}/Engine/Plugins/Marketplace/HorizonQuest to ${PROJECT_ROOT}/Plugins, 
+and add C++ definition to all of your build targets, \${PROJECT_NAME}.Target.cs and \${PROJECT_NAME}Editor.Target.cs:
 ```
-        bOverrideBuildEnvironment = true;
-        GlobalDefinitions.Add("HORIZON_PLUGIN_ENABLE_FAST_TARRAY_REPLICATION=1");
+bOverrideBuildEnvironment = true;
+GlobalDefinitions.Add("HORIZON_PLUGIN_ENABLE_FAST_TARRAY_REPLICATION=1");
 ```
 
 You can check HorizonQuestGraphDataContainer and HorizonQuestFlagDataContainer to see how it implemented.
