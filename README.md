@@ -241,7 +241,7 @@ User Guide: QuestStep
 -----------------------
 
 QuestStep is just another QuestGraph that can assign to every QuestNode, which means you can recursively defined QuestStep for each QuestNode.
-We usually didn't want to designed a Quest with too much step depth, most quest system I know only support one depth step, but it is depend on game design, this plugin didn't limit depth of QuestStep.
+We usually didn't want to design a Quest with too much step depth, most quest system I know only support one depth step, but it is depend on game design, this plugin didn't limit depth of QuestStep.
 
 Another hint about QuestStep is you may want to auto accept QuestStep when a Quest begin and start next step when previous step completed.
 This plugin support such use case by following two flags in each QuestNode:
