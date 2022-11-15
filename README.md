@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 
 ----------------------------------------------
                HorizonQuestDemo
-                 5.0.1
+                 5.1.0
           	dorgonman@hotmail.com
 ----------------------------------------------
    
@@ -35,7 +35,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.27-5.0
+Supported UnrealEngine version: 4.27-5.1
  
 
 -----------------------
@@ -438,6 +438,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.1.0
+
+* [New][QuestManagerComponent] Deprecate ClearQuestGraphSaveGameData, use ClearArchiveData instead
 
 *5.0.1 
 
