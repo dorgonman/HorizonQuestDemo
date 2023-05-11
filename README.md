@@ -1,6 +1,6 @@
 [Marketplace](https://www.unrealengine.com/marketplace/en-US/product/horizon-quest-general-purpose-quest-graph-system) 
 
-[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonQuestDemo-Shipping-CI?repoName=HorizonQuestDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=54&repoName=HorizonQuestDemo&branchName=main)
+[![Build Status](https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonQuestDemo-Shipping-CI?repoName=HorizonQuestDemo&branchName=main)](https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=54&repoName=HorizonQuestDemo&branchName=main)
 
 public feed: nuget.org  
 
@@ -20,14 +20,14 @@ main branch may be unstable since it is in development, please switch to tags, f
   
 
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
-1. Double click install_game_package_from_nuget_org.cmd or install_game_package_from_nuget_org.sh, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUQuest\Binaries\Win64\
+1. Double click install_game_package_from_nuget_org.cmd or install_game_package_from_nuget_org.sh, and check if Unrealditor-*.dll are installed to Binaries\Win64 and Plugins\HorizonQuest\Binaries\Win64\
 2. Double click HorizonQuestDemo.uproject  
 
 
 
 ----------------------------------------------
                HorizonQuestDemo
-                 5.1.0
+                 5.2.0
           	dorgonman@hotmail.com
 ----------------------------------------------
    
@@ -35,7 +35,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.27-5.1
+Supported UnrealEngine version: 4.27-5.2
  
 
 -----------------------
@@ -438,6 +438,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.2.0
+
+* [New][Network] SetIsReplicatedByDefault(true) for Manager and FlagManager Component
 
 *5.1.0
 

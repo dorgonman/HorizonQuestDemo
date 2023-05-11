@@ -5,10 +5,16 @@
 #pragma once
 
 // Engine
-
+#include "Camera/CameraComponent.h"
+#include "Components/CapsuleComponent.h"
+#include "Components/InputComponent.h"
 #include "Engine/EngineTypes.h"
-#include "Kismet/KismetSystemLibrary.h"
+#include "Engine/World.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/Controller.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Core
 #include "Logging/LogMacros.h"
