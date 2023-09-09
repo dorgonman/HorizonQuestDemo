@@ -22,3 +22,4 @@ Releases
 /Build/Windows/FileOpenOrder/CookerOpenOrder.log
 /Build/Windows/FileOpenOrder/EditorOpenOrder.log
 /.vsconfig
+/Build/Script/HorizonQuestDemo.Automation/*.props
