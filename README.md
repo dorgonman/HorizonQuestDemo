@@ -439,9 +439,17 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*5.3.1
+
+* [BugFix] Fix Quest DataTable can't be assigned
+
 *5.3.0
 
       Update to 5.3.0
+
+*5.2.1
+
+* [BugFix] Fix Quest DataTable can't be assigned
 
 *5.2.0
 
