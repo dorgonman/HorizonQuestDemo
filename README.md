@@ -439,6 +439,15 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+
+*5.2.1
+
+* [BugFix] Fix Quest DataTable can't be assigned
+
+RequiredAssetDataTags should be full path now, ex:
+RequiredAssetDataTags = "RowStructure=/Script/HorizonQuest.HorizonQuestTableRow
+
+
 *5.2.0
 
 * [New][Network] SetIsReplicatedByDefault(true) for Manager and FlagManager Component
