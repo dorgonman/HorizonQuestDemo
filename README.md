@@ -443,6 +443,9 @@ email: dorgonman@hotmail.com
 
 * [BugFix] Fix Quest DataTable can't be assigned
 
+* [Refactor] RawPointer to TObjectPtr
+
+
 *5.3.0
 
       Update to 5.3.0
