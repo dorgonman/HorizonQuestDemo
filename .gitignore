@@ -23,3 +23,11 @@ Releases
 /Build/Windows/FileOpenOrder/EditorOpenOrder.log
 /.vsconfig
 /Build/Script/HorizonQuestDemo.Automation/*.props
+/Build/Android/horizon-studio.keystore
+/Build/Android/src/com/epicgames/unreal/DownloadShim.java
+/Build/Android/src/com/horizonstudio/horizonquestdemo/AlarmReceiver.java
+/Build/Android/src/com/horizonstudio/horizonquestdemo/DownloaderActivity.java
+/Build/Android/src/com/horizonstudio/horizonquestdemo/OBBData.java
+/Build/Android/src/com/horizonstudio/horizonquestdemo/OBBDownloaderService.java
+/Build/Android_Multi/FileOpenOrder/CookerOpenOrder.log
+/Build/Android_Multi/FileOpenOrder/EditorOpenOrder.log
