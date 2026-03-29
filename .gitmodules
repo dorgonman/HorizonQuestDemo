@@ -5,7 +5,3 @@
 [submodule "Build/Base"]
 	path = Build/Base
 	url = https://kanohorizonia@dev.azure.com/kanohorizonia/EpicGames/_git/KanoUnrealBuildTool
-
-[submodule "Build/Base"]
-	path = Build/Base
-	url = https://kanohorizonia@dev.azure.com/kanohorizonia/EpicGames/_git/KanoUnrealBuildTool
