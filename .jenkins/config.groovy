@@ -1,4 +1,4 @@
-// HorizonQuestDemo — Jenkins Shared Library consumer configuration
+// HorizonUIPluginDemo — Jenkins Shared Library consumer configuration
 // This file is thin: project-specific values only. All orchestration lives in the shared library.
 
 def projectConfig() {
@@ -8,9 +8,9 @@ def projectConfig() {
         sharedLibraryName:   'jenkins-unreal-pipeline-library',
 
         // === Agent Selection ===
-        windowsAgentLabel:   'unreal-win64',  // Consumer: set to match your Jenkins Windows agent pool
-        macAgentLabel:       'unreal-mac',
-        linuxAgentLabel:     'unreal-linux',
+        windowsAgentLabel:   'windows && unreal',
+        macAgentLabel:       'mac && unreal',
+        linuxAgentLabel:     'linux && unreal',
 
         // === Producer/aggregate routing labels (optional overrides) ===
         // Use these to route specific producer types to separate agent pools.
@@ -20,14 +20,16 @@ def projectConfig() {
         macStandaloneAgentLabel:   '',   // override for Mac standalone builds; '' = use macAgentLabel
         linuxStandaloneAgentLabel: '',   // override for Linux standalone builds; '' = use linuxAgentLabel
         // UGS producers:
-        win64UgsAgentLabel:       '',   // override for Win64 UGS producer; '' = use windowsAgentLabel
-        macUgsAgentLabel:         '',   // override for Mac UGS producer; '' = use macAgentLabel
-        linuxUgsAgentLabel:       '',   // override for Linux UGS producer; '' = use linuxAgentLabel
+        win64UgsAgentLabel:       'windows && unreal && ugs',
+        macUgsAgentLabel:         'mac && unreal',
+        linuxUgsAgentLabel:       'linux && unreal',
 
         // === Consumer metadata ===
         scriptRoot:         'Build',
         reportRoot:         'Intermediate/BuildPackage',
-        slug:               'HorizonQuestDemo',
+        slug:               'HorizonRPGDemo',
+        scmCredentialId:    'dorgonman_azuredevops',
+        macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
         workspaceSlot:      'Package',
         win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
         macSharedWorkspaceRoot: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin',
@@ -71,13 +73,27 @@ def projectConfig() {
         nugetFeed:              'https://api.nuget.org/v3/index.json',
 
         // === Aggregate stage (Job D) ===
-        // Workspace for aggregation: any agent with nuget/buildgraph capability
-        aggregateAgentLabel:    'unreal-win64',  // Can be any: 'any', 'unreal-win64', etc.
-        deployWorkspace:        '',  // Auto-resolved if empty: "${sharedWorkspaceRoot}/HorizonPlugin/HorizonQuestDemo/Deploy"
+        // Workspace for UGS aggregation / NuGet / deploy. Use a deploy-capable label, not a physical node name.
+        ugsDeployAgentLabel:    'windows && unreal && deploy',
+        macDeployAgentLabel:    'mac && unreal && deploy',
+        iosAgentLabel:          'mac && unreal',
+        gpuTestAgentLabel:      'windows && unreal && gpu',
+
+        // AutoSDK target builds. Linux target is cross-compiled through Windows AutoSDK;
+        // linuxAgentLabel remains reserved for Linux host agents.
+        autoSdkAgentLabel:      'windows && unreal && autosdk',
+        androidAgentLabel:      'windows && unreal && autosdk',
+        linuxTargetAgentLabel:  'windows && unreal && autosdk',
+        linuxTargetHostPlatform: 'Win64',
+        ps5AgentLabel:          'windows && unreal && autosdk',
+        xsxAgentLabel:          'windows && unreal && autosdk',
+        switch2AgentLabel:      'windows && unreal && autosdk',
+
+        deployWorkspace:        '',  // Auto-resolved if empty: "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Deploy"
         bRunBuildGraphAggregation: false,
 
         // === Test + Coverage ===
-        bRunTestStandaloneWin64: true,
+        bRunTestWin64Standalone: true,
         coverageFormat:     ['xml', 'html'],
         buildConfiguration: 'Development',
         bDeploySentrySymbols: true,
@@ -89,7 +105,6 @@ def projectConfig() {
         sentryProject: 'horizonquestdemo',
         sentryForeignProject: 'unrealengine',
         sentryEnvironment: 'dev',
-        bUploadToUnrealHordeServer: false,
         bDeployUnrealHordeServer: false,
         unrealHordeServer:  'http://unrealhorde.local/',
         hordeToken:        '',  // Set via HORDE_TOKEN Jenkins parameter; empty here

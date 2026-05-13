@@ -1,7 +1,6 @@
-// .jenkins/Release/Jenkinsfile — release publish entrypoint for HorizonQuestDemo.
+// .jenkins/Release/Publish.Jenkinsfile — release publish entrypoint.
+// Consumes upstream artifacts, syncs public GitHub mirror, publishes NuGet,
+// and builds/publishes the public GitHub Pages site.
 @Library('jenkins-unreal-pipeline-library') _
 
-unrealReleaseDeployPipeline(
-    upstreamJob: 'HorizonPlugin/HorizonQuestDemo/Build/Development',
-    ugsBuildJob: 'HorizonPlugin/HorizonQuestDemo/Build/UGSBuild'
-)
+unrealReleaseDeployPipeline()

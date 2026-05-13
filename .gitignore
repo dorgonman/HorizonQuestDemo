@@ -34,3 +34,4 @@ Releases
 /.kano/cache
 /_kano/backlog/_shared/logs/agent_tools
 /_kano/backlog/.cache/
+/.kano/tmp/
