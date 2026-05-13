@@ -87,13 +87,19 @@ void AHorizonQuestDemoCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVe
 void AHorizonQuestDemoCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
+	if (UWorld* World = GetWorld())
+	{
+		AddControllerYawInput(Rate * BaseTurnRate * World->GetDeltaSeconds());
+	}
 }
 
 void AHorizonQuestDemoCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
-	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+	if (UWorld* World = GetWorld())
+	{
+		AddControllerPitchInput(Rate * BaseLookUpRate * World->GetDeltaSeconds());
+	}
 }
 
 void AHorizonQuestDemoCharacter::MoveForward(float Value)

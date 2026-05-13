@@ -8,8 +8,12 @@ AHorizonQuestDemoGameMode::AHorizonQuestDemoGameMode()
 {
 	// set default pawn class to our Blueprinted character
 	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter"));
-	if (PlayerPawnBPClass.Class != NULL)
+	if (PlayerPawnBPClass.Succeeded())
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed to find ThirdPersonCharacter blueprint at /Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter"));
 	}
 }
