@@ -27,7 +27,7 @@ pipeline {
     agent {
         node {
             label 'windows && unreal'
-            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonRPGDemo/Deploy"
+            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonQuestDemo/Deploy"
         }
     }
 

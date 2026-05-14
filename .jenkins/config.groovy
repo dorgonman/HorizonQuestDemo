@@ -1,4 +1,4 @@
-// HorizonUIPluginDemo — Jenkins Shared Library consumer configuration
+// HorizonQuestDemo — Jenkins Shared Library consumer configuration
 // This file is thin: project-specific values only. All orchestration lives in the shared library.
 
 def projectConfig() {
@@ -27,7 +27,7 @@ def projectConfig() {
         // === Consumer metadata ===
         scriptRoot:         'Build',
         reportRoot:         'Intermediate/BuildPackage',
-        slug:               'HorizonRPGDemo',
+        slug:               'HorizonQuestDemo',
         scmCredentialId:    'dorgonman_azuredevops',
         macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
         workspaceSlot:      'Package',
@@ -89,7 +89,7 @@ def projectConfig() {
         xsxAgentLabel:          'windows && unreal && autosdk',
         switch2AgentLabel:      'windows && unreal && autosdk',
 
-        deployWorkspace:        '',  // Auto-resolved if empty: "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Deploy"
+        deployWorkspace:        '',  // Auto-resolved if empty: "${sharedWorkspaceRoot}/HorizonPlugin/HorizonQuestDemo/Deploy"
         bRunBuildGraphAggregation: false,
 
         // === Test + Coverage ===
@@ -110,8 +110,15 @@ def projectConfig() {
         hordeToken:        '',  // Set via HORDE_TOKEN Jenkins parameter; empty here
         hordeGitStreamRepo: 'https://dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonQuestDemo',  // Repo URL for Horde stream ID (without trailing .git)
 
-        // === Plugin-specific ===
+        // === Plugin Validation ===
+        // Plugin validation is opt-in in the shared library. This PluginDemo project enables it explicitly.
+        bValidatePlugins:   true,
         pluginName:         'HorizonQuest',
+        pluginValidationPaths: [
+            'Plugins/HorizonQuest/HorizonQuest.uplugin',
+        ],
+        pluginValidationIncludeRegex: '^Plugins/.*\\.uplugin$',
+        pluginValidationExcludeRegex: '^Plugins/Marketplace/',
 
         // === Consumer metadata ===
         projectName:        'HorizonQuestDemo',
