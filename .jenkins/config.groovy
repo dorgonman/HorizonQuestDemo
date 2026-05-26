@@ -125,6 +125,9 @@ def projectConfig() {
         // === Consumer metadata ===
         projectName:        'HorizonQuestDemo',
         uprojectPath:       'HorizonQuestDemo.uproject',
+
+        // === Build timeout ===
+        build_timeout_hours: 48,
     ]
 }
 
