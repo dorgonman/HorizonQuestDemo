@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>readme</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="readme"/><meta property="og:description" content="Marketplace public feed: nuget.org Note: main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1 How to Run Demo Project before ..."/><meta property="og:image" content="https://dorgonman.github.io/HorizonUIPluginDemo/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Marketplace public feed: nuget.org Note: main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1 How to Run Demo Project before ..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script></head><body data-slug="readme"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">HorizonUIPluginDemo Release</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><a href="./testing" data-for="testing">Automation Test Results</a></li><li><a href="./coverage" data-for="coverage">Coverage Summary</a></li><li><a href="./project-readme" data-for="project-readme">project-readme</a></li><li><a href="./readme" data-for="readme">readme</a></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>readme</a></div></nav><h1 class="article-title">readme</h1><p show-comma="true" class="content-meta"><span>Jun 05, 2026</span><span>10 min read</span></p></div></div><article class="popover-hint"><p><a href="https://www.unrealengine.com/marketplace/en-US/product/horizon-quest-general-purpose-quest-graph-system" class="external">Marketplace<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=54&amp;repoName=HorizonQuestDemo&amp;branchName=main" class="external"><img src="https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonQuestDemo-Shipping-CI?repoName=HorizonQuestDemo&amp;branchName=main" alt="Build Status"/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>public feed: nuget.org</p>
+<p><a href="https://www.nuget.org/packages/HorizonQuestDemo/" class="external"><img src="https://img.shields.io/nuget/v/HorizonQuestDemo.svg" alt="nuget.org package in feed in "/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_DesignQuestGraph.png" alt="DesignQuestGraph"/></p>
+<p>Note:</p>
+<p>main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1</p>
+<p>How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)</p>
+<ol>
+<li>Double click install_game_package_from_nuget_org.cmd or install_game_package_from_nuget_org.sh, and check if Unrealditor-*.dll are installed to Binaries\Win64 and Plugins\HorizonQuest\Binaries\Win64\</li>
+<li>Double click HorizonQuestDemo.uproject</li>
+</ol>
+<hr/>
+<pre><code>           HorizonQuestDemo
+             5.7.0
+      	dorgonman@hotmail.com
+</code></pre>
+<hr/>
+<hr/>
+<h2 id="system-requirements">System Requirements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#system-requirements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Supported UnrealEngine version: 4.27-5.7</p>
+<hr/>
+<h2 id="installation-guide">Installation Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-guide" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>If you want to use plugins in C++, you should add associated module to your project’s
+YOUR_PROJECT.Build.cs:
+PublicDependencyModuleNames.AddRange(new string[] { “HorizonQuest”, “HorizonQuestFlag” });</p>
+<hr/>
+<h2 id="user-guide-quick-start">User Guide: Quick Start<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-quick-start" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>Create DataTable with FHorizonQuestTableRow and Add Quest to it.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_CreateDataTable.png" alt="Create Quest DataTable"/></p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_DesignDataTable.png" alt="Design Quest DataTable"/></p>
+<ol start="2">
+<li>Create QuestGraph and Design Quest Dependency.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_CreateQuestGraph.png" alt="CreateQuestGraph"/></p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_DesignQuestGraph.png" alt="DesignQuestGraph"/></p>
+<p>You can have two types of QuestDependency: Accept(Ⓐ Icon) and Complete(Ⓒ Icon).</p>
+<ul>
+<li>
+<p>Accept(Ⓐ) Dependency: means you can “Accept” the Quest only after it’s Parent Quest is Completed.</p>
+<p>Following image shows a possible use case that you will want to use Accept Dependency, check folling path to see how to implement it: /Game/_HorizonQuestUseCase/DragonQuest/QuestGraph/QuestGraph_DragonQuest:</p>
+</li>
+</ul>
+<p><img src="./ScreenShot/HorizonQuest_Dependency_A.png" alt="Dependency A"/></p>
+<ul>
+<li>
+<p>Complete(Ⓒ) Dependency: means you can “Complete” the Quest only after it’s Parent Quest is Completed.</p>
+<p>Following image shows a possible use case that you will want to use Complete Dependency, check folling path to see how to implement it: /Game/_HorizonQuestUseCase/CookMushroom/QuestGraph/QuestGraph_CookMushroom:</p>
+</li>
+</ul>
+<p><img src="./ScreenShot/HorizonQuest_Dependency_C.png" alt="Dependency C"/></p>
+<ul>
+<li>No Dependency: You can accept and complete the quests without dependency check..</li>
+</ul>
+<ol start="3">
+<li>Add HorizonQuestManager and HorizonQuestFlagManager Component to your PlayerState.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_AddManager1.png" alt="AddManager1"/></p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_AddManager2.png" alt="AddManager2"/></p>
+<ol start="4">
+<li>Then you can Accept/Complete Quest or Add QuestFlag using managers.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_AcceptCompleteQuest_AddFlag.png" alt="AddFlag"/></p>
+<p>Following screenshot is some Functions in QuestManagers.</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestManager1.png" alt="QuestManagerFunctions"/><br/>
+<img src="./ScreenShot/HorizonQuest_ScreenShot_QuestManager2.png" alt="QuestManagerFunctions"/></p>
+<p>Following screenshot is some Functions in QuestFlagManagers.</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestFlagManager.png" alt="QuestFlagManager"/></p>
+<hr/>
+<h2 id="user-guide-quest-widgets">User Guide: Quest Widgets<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-quest-widgets" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This plugin implement some C++ Widgets that can help show player’s quest progression in UI.</p>
+<p>You may want to check demo project first to see how to implement those Widget as WBP and adjust it layouts:
+/Game/_HorizonQuestDemo/_Subsystem/Quest/UI/Widget/WBP_QuestMenu.WBP_QuestMenu</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestWidget.png" alt="QuestWidgets"/></p>
+<ol>
+<li>
+<p>HorizonQuestMenuWidget is most import part of Quest UI, it put HorizonQuestTreeView and HorizonQuestDetailWidget together and display of those widgets.</p>
+</li>
+<li>
+<p>HorizonQuestTreeView implment <a href="https://docs.unrealengine.com/4.27/en-US/BlueprintAPI/TreeView/" class="external">UTreeView<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> come from UMG that can display all Quest and QuestStep in single Widget. This widget should be used together with HorizonQuestListIItemWidget(or it inheritance class), which implement IUserObjectListEntry for TreeView and QuestInfo UI Synchronization.</p>
+</li>
+<li>
+<p>HorizonQuestDetailWidget is the Widget that can display single QuestInfo come from QuestGraph and QuestDataTable.</p>
+</li>
+</ol>
+<p>There are some other useful Widget provided in the plugin:</p>
+<ol start="4">
+<li>HorizonQuestDebugTileView/HorizonQuestDebugListIItemWidget: Used for list all Quests in QuestGraph and and Trigger the Quest which click.
+You can check current support Trigger type in following screenshot.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_DebugUI.png" alt="QuestDebugUI"/></p>
+<ol start="5">
+<li>HorizonQuestHintWidget: The widget is used with NPC to display if we can Accept/Complete/CannotComplete the Quest.</li>
+</ol>
+<p>|
+<img src="./ScreenShot/HorizonQuest_ScreenShot_QuestHintAccept.png" alt="QuestHintAccept"/>  |
+<img src="./ScreenShot/HorizonQuest_ScreenShot_QuestHintComplete.png" alt="QuestHintComplete"/> |
+<img src="./ScreenShot/HorizonQuest_ScreenShot_QuestHintCannotComplete.png" alt="QuestHintCannotComplete"/>
+|</p>
+<hr/>
+<h2 id="user-guide-how-to-define-questrequirement">User Guide: How to define QuestRequirement<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-how-to-define-questrequirement" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>QuestRequirement is defined using Blueprint that can encapsulate any gameplay logics for Quest Completion test.</p>
+<ol>
+<li>
+<p>Create Blueprint inheritted from HorizonQuestRequirement.</p>
+</li>
+<li>
+<p>Override BP_CheckRequirement and Implement Check Logic: Here we check if flag count large than expected amount that defined in RequirementData.</p>
+</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestRequirement.png" alt="RequirementLogic"/></p>
+<ol start="3">
+<li>Assign Requirement and RequirementData to Quest defined in Quest DataTable: Here we Set CompleteRequirement will check if Flag_SQ002_Step1_1 count larger than 5.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestRequirement_Data.png" alt="RequirementData"/></p>
+<p>Here has two types of QuestRequirement:</p>
+<ol>
+<li>
+<p>AcceptRequirements: A Quest should pass all requirements assigned in DataTable before the quest can be accepted.</p>
+</li>
+<li>
+<p>CompleteRequirements: A Quest should pass all requirements assigned in DataTable before the quest can be completed.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="user-guide-how-to-define-questreward">User Guide: How to define QuestReward<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-how-to-define-questreward" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>QuestReward is defined using Blueprint that can encapsulate any quest reward logics.</p>
+<ol>
+<li>
+<p>Create Blueprint inheritted from HorizonQuestReward.</p>
+</li>
+<li>
+<p>Override BP_AcceptReward and Implement Accept Logic: Here we add player score by the amount that defined in RewardData.</p>
+</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestReward.png" alt="RewardLogic"/></p>
+<ol start="3">
+<li>Assign Reward and RewardData to Quest defined in Quest DataTable: Here we Add Score 1 when Quest Accepted and add score 100 when Quest success.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestReward_Data.png" alt="RewardData"/></p>
+<p>Here has three types of QuestReward:</p>
+<ol>
+<li>
+<p>Quest Accepted: You can give player critical items, for example, a key to open dungeon boss’s door.</p>
+</li>
+<li>
+<p>Quest Completed with Success State.</p>
+</li>
+<li>
+<p>Quest Completed with Failed State: You can give player any punishment here.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="user-guide-questcontext">User Guide: QuestContext<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-questcontext" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>QuestContext is used for Check/Querying if a Quest can be Accept/Completed, Your UObject should implement IHorizonQuestContextInterface in order to be used as QuestContext.</p>
+<p>Currently Plugin has two types of QuestContext you can assign to Quests in Quest DataTable:</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestContext.png" alt="QuestContext"/></p>
+<ol>
+<li>
+<p>QuestContext_AcceptFrom:  MQ001 can be Accepted from BP_NPC_Demo1, when you trying to Accept the Quest using QuestManager, you should pass BP_NPC_Demo1.</p>
+</li>
+<li>
+<p>QuestContext_CompletedBy: MQ001 can be Completed by BP_NPC_Demo2, when you trying to Complete the Quest using QuestManager, you should pass BP_NPC_Demo2.</p>
+</li>
+</ol>
+<hr/>
+<h2 id="user-guide-questmanager">User Guide: QuestManager<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-questmanager" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>QuestManager is used to store and manipulate player’s Quest,
+we can retrive current acceptable/completable quest using given QuestContext, or query a specific quest’s state.</p>
+<p>It also support Serialization, so we can Save/Load player’s quest progress using GetArchiveData/SetArchiveData with <a href="https://docs.unrealengine.com/4.26/en-US/InteractiveExperiences/SaveGame/" class="external">Unreal SaveGame system<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.</p>
+<hr/>
+<h2 id="user-guide-flagmanager">User Guide: FlagManager<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-flagmanager" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>You can see FlagManager as help or simpler version of Quest System.</p>
+<p>FlagManager didn’t have any dependency check, it simply keep record of GameplayTag’s trigger count.</p>
+<p>The design goal of FlagManager is to help user design complex Quest Requirement, for example, if player need to slay 5 Goblins in order to pass the quest, you can keep the count in the FlagManager and check the count in Requirement to see if player can pass the Quest.</p>
+<p>Check here to see how to implement FlagManager:/Game/_HorizonQuestDemo/_Subsystem/Quest/Blueprint/Requirement/BP_QuestFlagRequirement</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_CheckRequirementWithFlag.png" alt="CheckRequirementWithFlag"/></p>
+<hr/>
+<h2 id="user-guide-using-questmanager-and-flagmanager">User Guide: Using QuestManager and FlagManager<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-using-questmanager-and-flagmanager" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The best place to put HorizonQuestManager and HorizonQuestFlagManager Component is PlayerState, but if you need to share Quest progress between other players, put the Components in GameState is another choice.</p>
+<p>In order to Accept/Complete a Quest, it should pass all Prerequisite and Precondition check: Quest Progressing checks, Dependency checks, Requirement checks, and QuestContext checks.</p>
+<hr/>
+<h2 id="user-guide-queststep">User Guide: QuestStep<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-queststep" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>QuestStep is just another QuestGraph that can assign to every QuestNode, which means you can recursively defined QuestStep for each QuestNode.
+We usually didn’t want to design a Quest with too much step depth, most quest system I know only support one depth step, but it is depend on game design, this plugin didn’t limit depth of QuestStep.</p>
+<p>Another hint about QuestStep is you may want to auto accept QuestStep when a Quest begin and start next step when previous step completed.
+This plugin support such use case by following two flags in each QuestNode:</p>
+<ol>
+<li>
+<p>AutoAcceptQuestStepOnQuestAccepted: Enabled by default, when a Quest is accepted, it also accept all acceptable steps use given QuestContext.</p>
+</li>
+<li>
+<p>AutoAcceptNextQuestOnQuestCompleted: Disabled by default, when a Quest is completed, it also accept all acceptable Quests use given QuestContext. You usaually want to enable this in QuestSteps but not in MainQuest.</p>
+</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestStep_AutoAcceptNext.png" alt="QuestStep_AutoAcceptNext"/></p>
+<hr/>
+<h2 id="user-guide-integrate-quest-with-dialogue-system">User Guide: Integrate Quest with Dialogue System<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-integrate-quest-with-dialogue-system" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Usually we didn’t use QuestSystem alone, it is nessary to provide some extendability so we can integrate with other systems.</p>
+<p>This section will show how to extend QuestGraphNode, so we use additional information to integrate with Dialogue System. Here we use <a href="https://www.unrealengine.com/marketplace/en-US/product/horizondialogue-plugin" class="external">HorizonDialogue Plugin<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> as example.</p>
+<ol>
+<li>
+<p>Extend QuestGraphNode using C++</p>
+<ul>
+<li>
+<p>In {YourGameProject}.Build.cs, add HorizonQuest to  PublicDependencyModuleNames.</p>
+</li>
+<li>
+<p>Create New C++ that extends from UHorizonQuestGraphNode, ex: UHorizonQuestGameDemoQuestGraphNode</p>
+</li>
+<li>
+<p>Add your Game Specific UPROPERTY, ex: Integrate QuestSystem with HorizonDialogueScene</p>
+<pre><code>    UCLASS()
+    class HORIZONQUESTDEMO_API UHorizonQuestGameDemoQuestGraphNode : public UHorizonQuestGraphNode
+    {
+      GENERATED_BODY()
+      
+    public:  
+  
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> PreAcceptDialogueSceneClassPathList;
+      
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> InprogressDialogueSceneClassPathList;
+      
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> AcceptFrom_InprogressDialogueSceneClassPathList;
+      
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> CompleteBy_InprogressDialogueSceneClassPathList;
+      
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> PreCompleteDialogueSceneClassPathList;
+
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> AcceptedDialogueSceneClassPathList;
+
+          UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (MetaClass = &quot;HorizonDialogueScene&quot;), Category = &quot;_Game&quot;)
+          TArray&lt;FSoftClassPath> CompletedDialogueSceneClassPathList;
+      
+    };
+</code></pre>
+</li>
+<li>
+<p>In QuestGraph, change NodeClass to UHorizonQuestGameDemoQuestGraphNode you just created.</p>
+</li>
+</ul>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_QuestNode_Customization.png" alt="QuestNode Customization"/></p>
+<ul>
+<li>Now you can edit UPROPERTY in QuestGraph.</li>
+</ul>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_DialoguePlugin_Integration.png" alt="DialoguePlugin Integration"/></p>
+<ul>
+<li>Enqueue Dialogue in OnInteractStarted or in QuestManager’s callbacks: OnAcceptQuestEvent, OnCompleteQuest, etc.</li>
+</ul>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_IntegrateWithDialogue_EnqueueDialogue.png" alt="DialoguePlugin Enqueue"/></p>
+</li>
+<li>
+<p>Extend QuestGraphNode using Blueprint</p>
+<ul>
+<li>The process is similar with C++ version, instead of create C++ class, you only need to create new BP type that extend from HorizonQuestGraphNode and change NodeClass in QuestGraph.</li>
+</ul>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_BP_QuestNode_Customization.png" alt="BP_QuestNode Customization"/></p>
+</li>
+</ol>
+<hr/>
+<h2 id="user-guide-listendedicated-server-support">User Guide: Listen/Dedicated Server support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-listendedicated-server-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This plugin is designed to use with network game in mind, but it didn’t worked out of box, since it is very difficult to handle all use case without knowing project design. You can check this demo game to see how to make your own games with this plugin, it trying to implement minimum required RPC functions using Blueprint for demo purpose</p>
+<p>Here is some tips about how to use plugin with network games.</p>
+<ol>
+<li>First, you will need to ensure Replicates property is enabled in HorizonQuestManagerComponent and HorizonQuestFlagManagerComponent.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_Replication1.png" alt="Enable Replication"/></p>
+<ol start="2">
+<li>In Widget Blueprint binding and refresh your UI in NetworkReplicated callback.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_Replication2.png" alt="Refresh UI"/></p>
+<ol start="3">
+<li>If you put the Components in GameState in order to share Quests between players, you will need to send Accept/Complete Quest RPCs to Server from PlayerController or PlayerState, or you will failed to send RPC directly inside GameState, since client didn’t have connect ActorChannel to GameState.</li>
+</ol>
+<p>Defined Accept/Complete Quest RPC functions in PlayerController:</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_Replication3.png" alt="Accept/Complete Quest RPC Function Define"/></p>
+<p>Call Accept/Complete Quest RPC Function from your WBP, it will call Accept/Complete Quest in Server.</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_Replication4.png" alt="Call Accept/Complete Quest RPC Function"/></p>
+<ol start="4">
+<li>You can try to eliminate UI delay caused by network replication callback using client prediction technique: Calling Accept/Complete locally before sending ServerRPC.</li>
+</ol>
+<hr/>
+<h2 id="user-guide-enable-fast-tarray-replicationftr">User Guide: Enable Fast TArray Replication(FTR)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-enable-fast-tarray-replicationftr" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.unrealengine.com/en-US/API/Runtime/Engine/Engine/FNetFastTArrayBaseState/" class="external">Fast TArray Replication<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> is the feature that are recommanded officially for optimize TArray replication in network games. Althought this plugin implement the feature, but it didn’t enbled by default for following reasons:</p>
+<ol>
+<li>Using this feature without knowing how it works is dangerous.</li>
+<li>Not all game need it. For some games, it may not have obvious advantage, but introduce some usage limitation.</li>
+</ol>
+<p>It is not easy to document the best practice when the feature enabled, but here are some tips:</p>
+<ol>
+<li>Don’t do client side prediction when you trying to AcceptQuest/DropQuest.</li>
+<li>QuestTrigger that may AcceptQuest/DropQuest should not run in client.</li>
+</ol>
+<p>For example, you will want to do something like this:</p>
+<p><img src="./ScreenShot/HorizonQuest_ScreenShot_TriggerOnlyOnServer.png" alt="TriggerQuest Only On Server"/></p>
+<p>Since FTR will aggressively optimize TArray and only replicated back array items it changed in server,
+AcceptQuest/DropQuest will treat client prediction changes and server changes as different array item,
+and you will get different array size in client and server, which is not we expected.
+Without FTR, we are free from the bugs caused by this use case.</p>
+<p>To enable this feature, you will need to recompile plugin by copy the plugin from {UNREAL_ENGINE_ROOT}/Engine/Plugins/Marketplace/HorizonQuest to {PROJECT_ROOT}/Plugins,
+and add C++ definition to all of your build targets, {PROJECT_NAME}.Target.cs and {PROJECT_NAME}Editor.Target.cs:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>bOverrideBuildEnvironment = true;</span></span>
+<span data-line><span>GlobalDefinitions.Add(&quot;HORIZON_PLUGIN_ENABLE_FAST_TARRAY_REPLICATION=1&quot;);</span></span></code></pre></figure>
+<p>You can check HorizonQuestGraphDataContainer and HorizonQuestFlagDataContainer to see how it implemented.</p>
+<hr/>
+<h2 id="technical-details">Technical Details<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#technical-details" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The goal of this plugin is to provide a general purpose Quest System that can support non-linear story telling.</p>
+<p>Although this plugin didn’t implement a Dialogue System with it, but it was designed in mind with flexibility for customization with game project, so can be integrated with any other systems you like.</p>
+<p>Features:</p>
+<ol>
+<li>
+<p>QuestGraph systems that can define non-linear depencency of each Quests.</p>
+</li>
+<li>
+<p>Support Accept/Complete QuestRequirement and QuestReward.</p>
+</li>
+<li>
+<p>Callbacks that can be used to customize your games. ex: OnAcceptQuestEvent, OnCompleteQuestEvent, OnAcceptQuestRewardEvent, OnQuestStateChangedEvent, OnDropQuestEvent</p>
+</li>
+<li>
+<p>Additional QuestFlagSystem that help designer record any gameplay flag that can be used with QuestRequirement to check if a Quest can be Accepted/Completed.</p>
+</li>
+<li>
+<p>QuestTreeView Menu Widgets and Debug UI: for showing Quests with  UMG Widgets.</p>
+</li>
+</ol>
+<p>Code Modules:</p>
+<p>HorizonQuest (Runtime)
+HorizonQuestEditor (Editor)
+HorizonQuestFlag (Runtime)</p>
+<p>Network Replicated: True</p>
+<p>Supported Development Platforms: Win64, Mac, Linux</p>
+<p>Supported Target Build Platforms: All Platforms</p>
+<p>Tested Platform: Win64</p>
+<p>Documentation and Example: <a href="https://github.com/dorgonman/HorizonQuestDemo" class="external">https://github.com/dorgonman/HorizonQuestDemo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://youtu.be/ju3tL1lv7lU" class="external">DemoVideo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+<a href="https://youtu.be/mANMYY476mM" class="external">QuickStartVideo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The goal of this plugin is to provide a General Quest Graph system for Games.</p>
+<hr/>
+<h2 id="contact-and-support">Contact and Support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contact-and-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>email: <a href="mailto:dorgonman@hotmail.com" class="external">dorgonman@hotmail.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="version-history">Version History<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#version-history" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>*5.7.0</p>
+<pre><code>  Update to 5.7.0
+</code></pre>
+<p>*5.6.0</p>
+<pre><code>  Update to 5.6.0
+</code></pre>
+<p>*5.5.0</p>
+<pre><code>  Update to 5.5.0
+</code></pre>
+<p>*5.4.1</p>
+<ul>
+<li>
+<p>[BugFix] Fix Quest DataTable can’t be assigned</p>
+</li>
+<li>
+<p>[Refactor] RawPointer to TObjectPtr</p>
+</li>
+</ul>
+<p>*5.4.0</p>
+<pre><code>  Update to 5.4.0
+</code></pre>
+<p>*5.2.1</p>
+<ul>
+<li>[BugFix] Fix Quest DataTable can’t be assigned</li>
+</ul>
+<p>*5.2.0</p>
+<ul>
+<li>[New][Network] SetIsReplicatedByDefault(true) for Manager and FlagManager Component</li>
+</ul>
+<p>*5.1.0</p>
+<ul>
+<li>[New][QuestManagerComponent] Deprecate ClearQuestGraphSaveGameData, use ClearArchiveData instead</li>
+</ul>
+<p>*5.0.1</p>
+<ul>
+<li>
+<p>[BugFix] RefreshQuestListViewByQuestList not work as expect and possible crash</p>
+</li>
+<li>
+<p>[BugFix] UE5 Compile Warning</p>
+</li>
+</ul>
+<p>*5.0.0</p>
+<ul>
+<li>
+<p>[BugFix][DataTable] Fix HorizonQuestDataTableRowHandle operator override wrong type</p>
+</li>
+<li>
+<p>[BugFix] Fix build machine compile error</p>
+</li>
+<li>
+<p>[Refactor][QuestManager] SetArchiveData</p>
+</li>
+<li>
+<p>[BugFix] Skip InQuestTypeTagFilter check if it is empty</p>
+</li>
+<li>
+<p>[New][HorizonQuestTableRow] Implement QuestTypeTag</p>
+</li>
+</ul>
+<p>*4.27.2</p>
+<pre><code>  NEW: Implement Fast Array Replication and redesign SaveGameData
+</code></pre>
+<p>*4.27.0</p>
+<pre><code>    NEW: First Version including core features.
+</code></pre></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#system-requirements" data-for="system-requirements">System Requirements</a></li><li class="depth-0"><a href="#installation-guide" data-for="installation-guide">Installation Guide</a></li><li class="depth-0"><a href="#user-guide-quick-start" data-for="user-guide-quick-start">User Guide: Quick Start</a></li><li class="depth-0"><a href="#user-guide-quest-widgets" data-for="user-guide-quest-widgets">User Guide: Quest Widgets</a></li><li class="depth-0"><a href="#user-guide-how-to-define-questrequirement" data-for="user-guide-how-to-define-questrequirement">User Guide: How to define QuestRequirement</a></li><li class="depth-0"><a href="#user-guide-how-to-define-questreward" data-for="user-guide-how-to-define-questreward">User Guide: How to define QuestReward</a></li><li class="depth-0"><a href="#user-guide-questcontext" data-for="user-guide-questcontext">User Guide: QuestContext</a></li><li class="depth-0"><a href="#user-guide-questmanager" data-for="user-guide-questmanager">User Guide: QuestManager</a></li><li class="depth-0"><a href="#user-guide-flagmanager" data-for="user-guide-flagmanager">User Guide: FlagManager</a></li><li class="depth-0"><a href="#user-guide-using-questmanager-and-flagmanager" data-for="user-guide-using-questmanager-and-flagmanager">User Guide: Using QuestManager and FlagManager</a></li><li class="depth-0"><a href="#user-guide-queststep" data-for="user-guide-queststep">User Guide: QuestStep</a></li><li class="depth-0"><a href="#user-guide-integrate-quest-with-dialogue-system" data-for="user-guide-integrate-quest-with-dialogue-system">User Guide: Integrate Quest with Dialogue System</a></li><li class="depth-0"><a href="#user-guide-listendedicated-server-support" data-for="user-guide-listendedicated-server-support">User Guide: Listen/Dedicated Server support</a></li><li class="depth-0"><a href="#user-guide-enable-fast-tarray-replicationftr" data-for="user-guide-enable-fast-tarray-replicationftr">User Guide: Enable Fast TArray Replication(FTR)</a></li><li class="depth-0"><a href="#technical-details" data-for="technical-details">Technical Details</a></li><li class="depth-0"><a href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" data-for="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin</a></li><li class="depth-0"><a href="#contact-and-support" data-for="contact-and-support">Contact and Support</a></li><li class="depth-0"><a href="#version-history" data-for="version-history">Version History</a></li></ul></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.4.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="./postscript.js" type="module"></script></html>
