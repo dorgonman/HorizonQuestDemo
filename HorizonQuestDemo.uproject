@@ -34,6 +34,10 @@
 			"Name": "HorizonQuest",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/"
+		},
+		{
+			"Name": "Fab",
+			"Enabled": false
 		}
 	]
 }
