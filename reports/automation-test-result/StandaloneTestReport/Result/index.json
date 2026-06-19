@@ -1,0 +1,194 @@
+{
+	"devices": [
+		{
+			"deviceName": "redacted-device",
+			"instance": "redacted-instance",
+			"instanceName": "redacted-instance",
+			"platform": "Windows",
+			"oSVersion": "Windows (redacted)",
+			"model": "redacted-model",
+			"gPU": "redacted-gpu",
+			"cPUModel": "redacted-cpu",
+			"rAMInGB": "redacted",
+			"renderMode": "D3D12_SM5",
+			"rHI": "D3D12 (SM5)",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.06.17-14.38.09",
+	"succeeded": 11,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.7871770262718201,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "[redacted-path]",
+	"tests": [
+		{
+			"testDisplayName": "Failed",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Force Complete All Quest.Failed",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.15334469079971313,
+			"dateTime": "2026.06.17-14.38.04",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Success",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Force Complete All Quest.Success",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.06977540254592896,
+			"dateTime": "2026.06.17-14.38.04",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Check Accept/Complete Context",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Check Accept/Complete Context",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.020466402173042297,
+			"dateTime": "2026.06.17-14.38.05",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Check if save load quest works",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Check if save load quest works",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.03840170055627823,
+			"dateTime": "2026.06.17-14.38.05",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Check if we can accept and finish a quest",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Check if we can accept and finish a quest",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.012062299996614456,
+			"dateTime": "2026.06.17-14.38.05",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Check Quest progress",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Check Quest progress",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.15418079495429993,
+			"dateTime": "2026.06.17-14.38.05",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Check SQ002 steps Auto Accept/Complete ",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Check SQ002 steps Auto Accept/Complete ",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.11440140008926392,
+			"dateTime": "2026.06.17-14.38.05",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DropQuest",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.DropQuest",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.025712698698043823,
+			"dateTime": "2026.06.17-14.38.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Test Repeat Quest",
+			"fullTestPath": "Plugin.HorizonQuest./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap./Game/_HorizonQuestDemo/_Subsystem/Quest/Graph/QuestGraph_Main.Test Repeat Quest",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.11287589371204376,
+			"dateTime": "2026.06.17-14.38.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Check QuestFlag count",
+			"fullTestPath": "Plugin.HorizonQuestFlag./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap.Check QuestFlag count",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.039282601326704025,
+			"dateTime": "2026.06.17-14.38.09",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Save/Load Serialization",
+			"fullTestPath": "Plugin.HorizonQuestFlag./Game/_HorizonQuestDemo/Map/HorizonQuestDemoMap.Save/Load Serialization",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"F87A592442FE840BDADC118A5A9AD450"
+			],
+			"duration": 0.04667310044169426,
+			"dateTime": "2026.06.17-14.38.09",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

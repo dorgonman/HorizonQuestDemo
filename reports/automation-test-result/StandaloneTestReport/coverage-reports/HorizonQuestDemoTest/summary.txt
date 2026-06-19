@@ -1,0 +1,9 @@
+line-rate=0.6540
+branch-rate=0.0000
+lines-covered=1363
+lines-valid=2084
+branches-covered=0
+branches-valid=0
+
+line-coverage-percent=65.40
+branch-coverage-percent=0.00
